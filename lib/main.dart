@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kickmart_product/menu.dart';
+import 'package:kickmart_product/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
