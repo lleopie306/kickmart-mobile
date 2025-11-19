@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kickmart_product/screens/menu.dart';
 import 'package:kickmart_product/screens/productlist_form.dart';
+import 'package:kickmart_product/screens/product_entry_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -27,7 +28,7 @@ class LeftDrawer extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.all(10)),
                 Text(
-                  "Tempat belanja produk sepak bola terbaik!",
+                  "The best place to shop football products!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -38,10 +39,11 @@ class LeftDrawer extends StatelessWidget {
               ],
             ),
           ),
+
           // --- Menu Halaman Utama ---
           ListTile(
             leading: const Icon(Icons.home_outlined),
-            title: const Text('Halaman Utama'),
+            title: const Text('Home'),
             onTap: () {
               Navigator.pushReplacement(
                 context,
@@ -51,15 +53,30 @@ class LeftDrawer extends StatelessWidget {
               );
             },
           ),
+
           // --- Menu Tambah Produk ---
           ListTile(
             leading: const Icon(Icons.add_shopping_cart),
-            title: const Text('Tambah Produk'),
+            title: const Text('Add Product'),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const ProductFormPage(),
+                ),
+              );
+            },
+          ),
+
+          // --- Menu Daftar Produk (sesuai instruksi modul) ---
+          ListTile(
+            leading: const Icon(Icons.list_alt),
+            title: const Text('Product List'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProductEntryListPage(),
                 ),
               );
             },
